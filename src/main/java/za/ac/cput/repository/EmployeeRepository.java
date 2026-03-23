@@ -52,7 +52,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         if (employeeOld == null) {        //test
             return null;        //object doesnt exist
         }
-            //If old object does not exist in the list
+            //If old object does exist in the list
             //delete it from the list
             boolean success = delete(employeeNum);
             if (success) {
