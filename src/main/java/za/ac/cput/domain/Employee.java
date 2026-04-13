@@ -7,6 +7,7 @@ public class Employee {
     private String lastName;
     private String email;
     private double salary;
+    //private Contact contact;
 
 
 

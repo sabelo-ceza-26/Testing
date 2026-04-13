@@ -1,6 +1,6 @@
 package za.ac.cput;
 
-import za.ac.cput.Factory.EmployeeFactory;
+import za.ac.cput.factory.EmployeeFactory;
 import za.ac.cput.domain.Employee;
 
 

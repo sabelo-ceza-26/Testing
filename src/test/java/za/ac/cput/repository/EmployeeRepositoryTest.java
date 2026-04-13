@@ -1,7 +1,7 @@
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.*;
-import za.ac.cput.Factory.EmployeeFactory;
+import za.ac.cput.factory.EmployeeFactory;
 import za.ac.cput.domain.Employee;
 
 
