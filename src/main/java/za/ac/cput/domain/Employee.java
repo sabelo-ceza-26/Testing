@@ -1,12 +1,15 @@
 package za.ac.cput.domain;
 
 
+import java.time.LocalDate;
+
 public class Employee {
     private String employeeNum;
     private String firstName;
     private String lastName;
     private String email;
     private double salary;
+    private LocalDate dateOfBirth;
     //private Contact contact;
 
 
@@ -20,6 +23,7 @@ public class Employee {
         this.lastName = builder.lastName;
         this.email = builder.email;
         this.salary = builder.salary;
+        this.dateOfBirth = builder.build().dateOfBirth;
         //Builder object is passed and the employee is set - I have now created an employee object
 
     }
@@ -44,6 +48,11 @@ public class Employee {
         return salary;
     }
 
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -52,6 +61,7 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", salary=" + salary +
+                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 
@@ -61,6 +71,7 @@ public class Employee {
         private String lastName;
         private String email;
         private double salary;
+        private LocalDate dateOfBirth;
 
 
         public Builder setEmployeeNum(String employeeNum) {
@@ -89,12 +100,18 @@ public class Employee {
             return this;
         }
 
+        public Builder setDateOfBirth(LocalDate dateOfBirth) {
+            this.dateOfBirth = dateOfBirth;
+            return this;
+        }
+
         public Builder copy(Employee employee){
             this.employeeNum = employee.employeeNum;
             this.firstName = employee.firstName;
             this.lastName = employee.lastName;
             this.email = employee.email;
             this.salary = employee.salary;
+            this.dateOfBirth = employee.dateOfBirth;
             return this;
         }
 

@@ -3,10 +3,12 @@ package za.ac.cput.factory;
 import za.ac.cput.Util.Helper;
 import za.ac.cput.domain.Employee;
 
+import java.time.LocalDate;
+
 
 public class EmployeeFactory {
     public static Employee createEmployee(String employeeNum, String firstName, String lastName, String
-                                          email, double salary){
+                                          email, double salary, LocalDate dateOfBirth){
         if (Helper.isNullOrEmpty(employeeNum) ||
                 Helper.isNullOrEmpty(firstName) ||
                 Helper.isNullOrEmpty(lastName) ||
@@ -28,6 +30,7 @@ public class EmployeeFactory {
                 .setLastName(lastName)
                 .setEmail(email)
                 .setSalary(salary)
+                .setDateOfBirth(dateOfBirth)
                 .build();
 
 
