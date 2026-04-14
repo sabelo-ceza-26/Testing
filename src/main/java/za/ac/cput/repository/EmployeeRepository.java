@@ -38,11 +38,18 @@ public class EmployeeRepository implements IEmployeeRepository {
     //Linear search with for loop
     @Override
     public Employee read(String employeeNum) {
-        for (Employee e : employeeList) {
-            if (e.getEmployeeNum().equals(employeeNum))
-                return e;
-        }
-        return null;
+//        for (Employee e : employeeList) {
+//            if (e.getEmployeeNum().equals(employeeNum))
+//                return e;
+//        }
+//        return null;
+
+
+        //Alternately, Lambda Expressions
+        return employeeList.stream()
+                .filter(e -> e.getEmployeeNum().equals(employeeNum))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
